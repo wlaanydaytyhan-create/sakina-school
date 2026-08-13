@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#176b5b"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><meta name="description" content="سجل مدرسة فرع السكينة والوقار">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/app.css"><title>سجل مدرسة فرع السكينة والوقار</title>
+</head>
+<body>
+<div id="app" class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><img src="assets/icon-192.png" alt=""><div><strong>السُّكينة والوقار</strong><small>سجل المدرسة</small></div></div>
+    <nav id="sideNav">
+      <button data-view="dashboard">⌂ <span>الرئيسية</span></button>
+      <button data-view="students">👨‍🎓 <span>سجل الطلاب</span></button>
+      <button data-view="attendance">✅ <span>تحضير اليوم</span></button>
+      <button data-view="reports">📊 <span>التقارير</span></button>
+      <button data-view="share">📤 <span>مشاركة السجلات</span></button>
+      <button data-view="backup">💾 <span>النسخ الاحتياطي</span></button>
+      <button data-view="settings">⚙️ <span>الإعدادات</span></button>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn" id="menuBtn">☰</button><div><h1 id="pageTitle">الرئيسية</h1><span id="todayText"></span></div><div class="top-actions"><span class="offline">● بدون إنترنت</span></div></header>
+    <section id="view" class="view"></section>
+  </main>
+</div>
+<div id="modalRoot"></div>
+<input id="restoreInput" type="file" accept="application/json,.json" hidden>
+<script src="js/app.js"></script>
+</body></html>
